@@ -21,15 +21,20 @@
       
       <!-- funcionando sem animação -->
       <a-marker id="markerDrill" preset="hiro">
-        <a-gltf-model
+        <!-- <a-gltf-model
           id="drillModel"
           gltf-model="#FuradeiraErrada"
           scale="0.5 0.5 0.5"
           rotation="0 0 0"
           position="0 0 0"
-        ></a-gltf-model>
+        ></a-gltf-model> -->
+
+        <a-entity fbx-model="src: url(./furadeira-certa.fbx);"></a-entity>
       </a-marker>
 
+      <script>
+        console.log('adicionando furadeira fbx');
+      </script>
 
       <a-entity camera></a-entity>
     </a-scene>
