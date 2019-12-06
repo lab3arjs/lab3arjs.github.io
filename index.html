@@ -2,7 +2,7 @@
   <head>
       <script src="https://cdn.jsdelivr.net/npm/aframe@0.9.2/dist/aframe-master.min.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
-
+      <script src="https://cdn.jsdelivr.net/npm/zlibjs@0.3.1/bin/node-zlib.min.js"></script>
     <title>LAB 3</title>
   </head>
   <body id="corpo" style="margin : 0px; overflow: hidden;">
@@ -11,15 +11,15 @@
             <a-asset-item id="brainstem" src="https://raw.githubusercontent.com/lab3arjs/ar-js-furadeira/developer/modelos3D/furadeira-errada.gltf"></a-asset-item>
           </a-assets>
         
-          <a-entity gltf-model="#brainstem" position="0 0 -5" scale="1 1 1"></a-entity>
+          <!-- <a-entity gltf-model="#brainstem" position="0 0 -5" scale="1 1 1"></a-entity> -->
 
-          <a-entity fbx-model="src: url(furadeira-certa.fbx);" position="0 0 2" scale="0.5 0.5 0.5"></a-entity>
+          <a-entity fbx-model="src: url(furadeira-certa.fbx);" position="0 0 0" scale="0.5 0.5 0.5"></a-entity>
         
           <a-sky color="#FAFAFA"></a-sky>
         </a-scene>
 
         <script>
-          console.log('aframe 9.2');
+          console.log('zlib da massa');
         </script>
   </body>
 </html>
