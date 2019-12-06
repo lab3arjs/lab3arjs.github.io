@@ -3,6 +3,7 @@
       <script src="https://cdn.jsdelivr.net/npm/aframe@0.9.2/dist/aframe-master.min.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
       <script src="libs/inflate.min.js"></script>
+      <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
     <title>LAB 3</title>
   </head>
   <body id="corpo" style="margin : 0px; overflow: hidden;">
@@ -13,34 +14,22 @@
         
           <!-- <a-entity gltf-model="#brainstem" position="0 0 -5" scale="1 1 1"></a-entity> -->
 
-          <a-entity fbx-model="src: url(furadeira-certa.fbx);" rotation="0 270 0" position="-99 -99 -99" scale="0.35 0.35 0.35" animation-mixer="loop: repeat"></a-entity>
+          <a-gui-flex-container 
+	flex-direction="column" justify-content="center" align-items="normal" component-padding="0.1" opacity="0.7" width="3.5" height="4.5"
+	position="2 2.5 -4" rotation="0 0 0"
+>
+
+<a-entity fbx-model="src: url(furadeira-certa.fbx);" rotation="0 270 0" position="-99 -99 -99" scale="0.35 0.35 0.35" animation-mixer="loop: repeat"></a-entity>
+
+</a-gui-flex-container>
+
+          
         
           <a-sky color="#FAFAFA"></a-sky>
         </a-scene>
 
-        <a-scene>
-            <a-entity position="0 .6 4">
-                <a-camera>
-                    <a-entity id="mycursor" cursor="fuse: true; fuseTimeout: 500; max-distance: 30;"
-                    position="0 0 -5"
-                    geometry="primitive: ring"
-                    material="color: blue; shader: flat">
-                    </a-entity>
-                </a-camera>
-            </a-entity>
-        
-            <!-- "button" -->
-            <a-entity id="refresh-button" geometry="primitive: box" material="color: red" position="0 0 -2"></a>
-        </a-scene>
-        
         <script>
-            document.querySelector('#refresh-button').addEventListener('click', function() {
-                console.log('hehehe');
-            });
-        </script>
-
-        <script>
-          console.log('furadeirinha 270');
+          console.log('furadeirinha gui');
         </script>
   </body>
 </html>
