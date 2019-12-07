@@ -1,75 +1,25 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Instruções</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
-    />
+      <script src="https://cdn.jsdelivr.net/npm/aframe@0.9.2/dist/aframe-master.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
+      <script src="libs/inflate.min.js"></script>
+    <title>LAB 3</title>
   </head>
-  <body>
-    <section class="section">
-      <div class="container">
-        <h1 class="title has-text-dark is-1">
-          Treinamento em realidade aumentada - Latecoere&reg
-        </h1>
-        <p class="subtitle">
-          Neste treinamento você aprenderá como utilizar a furadeira aeronáutica
-          corretamente!
-        </p>
+  <body id="corpo" style="margin : 0px; overflow: hidden;">
+      <a-scene>
+          <a-assets>
+            <a-asset-item id="brainstem" src="https://raw.githubusercontent.com/lab3arjs/ar-js-furadeira/developer/modelos3D/furadeira-errada.gltf"></a-asset-item>
+          </a-assets>
+        
+          <!-- <a-entity gltf-model="#brainstem" position="0 0 -5" scale="1 1 1"></a-entity> -->
 
-        <br />
+          <a-entity fbx-model="src: url(furadeira-certa.fbx);" rotation="0 270 0" position="-99 -99 -99" scale="0.35 0.35 0.35" animation-mixer="loop: repeat"></a-entity>
+        
+          <a-sky color="#FAFAFA"></a-sky>
+        </a-scene>
 
-        <h2 class="title has-text-dark is-2">Projeto desenvolvido por:</h2>
-        <div class="list is-hoverable">
-          <a href="github.com/mrocha98" class="list-item">Felipe da Silva Nunes Gomes</a>
-          <a href="#" class="list-item">Fernando Tavolaro de Castro</a>
-          <a href="#" class="list-item">Matheus Rocha da Silva</a>
-        </div>
-
-        <br />
-
-        <h2 class="title has-text-dark is-2">Instruções</h2>
-        <div class="content">
-          <ol class="is-upper-roman">
-            <li>Tenha em mão os marcadores</li>
-            <li>Coloque o marcador "X" de frente para a câmera</li>
-            <li>Assista a animação do procedimento incorreto</li>
-            <li>Agora troque pelo marcador "O"</li>
-            <li>Assista a animação do procedimento correto</li>
-          </ol>
-        </div>
-
-        <br />
-
-          <a href="furadeira.html" class="button is-rounded is-medium is-link">Iniciar treinamento</a>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="empresas container">
-        <div class="empresas__fatec">
-          <p>
-            Faculdade de Tecnologia de São José dos Campos - Prof. Jessen Vidal
-          </p>
-          <p>
-            Av. Cesare Mansueto Giulio Lattes, 1350 Eugênio de Melo São José dos
-            Campos/SP
-          </p>
-
-          <br />
-
-        </div>
-        <div class="empresas__latecoere">
-          <p>LATECOERE DO BRASIL INDÚSTRIA AERONÁUTICA LTDA</p>
-          <p>
-            Avenida Getúlio Dorneles Vargas, nº 3320 - Jardim Califórnia
-            Jacareí/SP CEP: 12305-010
-          </p>
-        </div>
-      </div>
-    </footer>
+        <script>
+          console.log('oi oi oi');
+        </script>
   </body>
-  <script src="script.js"></script>
 </html>

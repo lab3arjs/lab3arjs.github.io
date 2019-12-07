@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras.animation-mixer@6.0.1/index.min.js"></script>
+  </head>
+  <body id="corpo" style="margin : 0px; overflow: hidden;">
+    <a-scene arjs="debugUIEnabled: false;">
+      <a-assets>
+        <a-asset-item
+          id="FuradeiraCerta"
+          src="https://raw.githubusercontent.com/lab3arjs/ar-js-furadeira/modelos-3d/teste.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="FuradeiraErrada"
+          src="https://cdn.glitch.com/2f2c4d8c-fd7a-4608-8392-52a55cebe1c3%2Ffuradeira-errada.gltf?v=1575505463756"
+        ></a-asset-item>
+        <a-asset-item
+          id="FuradeiraCertaDAE"
+          src="https://raw.githubusercontent.com/lab3arjs/ar-js-furadeira/developer/modelos3D/furadeira-certa.dae"
+        ></a-asset-item>
+        <a-asset-item
+          id="TESTE"
+          src="https://raw.githubusercontent.com/lab3arjs/ar-js-furadeira/developer/pencil/scene.gltf"
+        ></a-asset-item>
+        
+      </a-assets>
+
+      <!--- Procedimento errado (sem tripé) marcador + --->
+      <a-marker
+        preset="pattern"
+        type="pattern"
+        url="https://raw.githubusercontent.com/lab3arjs/ar-js-furadeira/developer/marcadores-personalizados/pattern-marcador-procedimento-sem-tripe.patt">
+      
+        <a-gltf-model
+          id="drillModel_001"
+          gltf-model="#FuradeiraErrada"
+          scale="0 0 0"
+          rotation="0 0 0"
+          position="0 0 0"
+          animation-mixer="loop:repeat"
+        ></a-gltf-model>
+        <a-box position="0 0.5 0" material="color: red;"></a-box>
+      </a-marker>
+
+      <!--- Procedimento certo (com tripé) marcador Ø  --->
+      <a-marker
+        preset="pattern"
+        type="pattern"
+        url="https://raw.githubusercontent.com/lab3arjs/ar-js-furadeira/developer/marcadores-personalizados/pattern-marcador-procedimento-com-tripe.patt">
+        <a-gltf-model
+          id="drillModel_002"
+          dae-model="#FuradeiraCertaDAE"
+          scale="0 0 0"
+          rotation="0 0 0"
+          position="0 0 0"
+          animation-mixer="loop:repeat"
+        ></a-gltf-model>
+        <a-box position="0 0.5 0" material="color: blue;"></a-box>
+      </a-marker>
+
+      <!-- funcionando sem animação e usando hiro --->
+      <a-marker id="markerDrill" preset="hiro">
+          <a-box position="0 0.5 0" material="color: yellow;"></a-box>
+      </a-marker>
+      
+      <a-box position="0 0.8 0" scale="0.5 0.5 0.5" material="color: yellow;"></a-box>
+<a-static-camera></a-static-camera>
+      <!-- <a-entity camera></a-entity> -->
+    </a-scene>
+  </body>
+</html>
